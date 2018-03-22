@@ -54,10 +54,7 @@ func f() (int, int, int, bool, string) {
 	return 0, 1, 2, true, "test"
 }
 
-func main() {
-	loop()
-	multipleAssigments()
-
+func functions() {
 	fmt.Println(A(200))
 
 	a, b := multipleReturnValues(7, 9)
@@ -65,4 +62,50 @@ func main() {
 
 	a, _, _, c, _ := f()
 	fmt.Println(a, c)
+}
+
+func maps() {
+	m := make(map[string]int)
+	fmt.Println(m, len(m))
+
+	days := make(map[int]string)
+	days[1] = "Monday"
+	days[2] = "Tuesday"
+	days[3] = "Wednesday"
+	days[4] = "Thursday"
+	days[5] = "Friday"
+	days[6] = "Saturday"
+	days[7] = "Sunday"
+	fmt.Println(days)
+	fmt.Println("The 3th day is: ", days[3])
+
+	days2 := map[int]string{
+		1: "Monday",
+		2: "Tuesday",
+		3: "Wednesday",
+		4: "Thursday",
+		5: "Friday",
+		6: "Saturday",
+		7: "Sunday",
+	}
+	fmt.Println(days2)
+
+	// map of planets to their number of moons
+	moons := map[string]int{
+		"Mercury": 0,
+		"Venus":   0,
+		"Earth":   1,
+		"Mars":    2,
+		"Jupiter": 67,
+	}
+
+	fmt.Println("Earth:", moons["Earth"])
+	fmt.Println("Neptune:", moons["Neptune"])
+}
+
+func main() {
+	loop()
+	multipleAssigments()
+	functions()
+	maps()
 }
