@@ -15,6 +15,5 @@ func (p Point) String() string {
 
 func main() {
 	p := Point{X: 300, Y: 60}
-
 	println(p.String())
 }
