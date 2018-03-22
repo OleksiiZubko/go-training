@@ -112,6 +112,61 @@ func maps() {
 
 	n, found = moons2["Mercury"]
 	fmt.Println("Mercury:", n, "Found:", found)
+
+	moons3 := map[string]int{"Mercury": 0, "Venus": 0, "Earth": 1, "Mars": 2, "Jupiter": 67}
+
+	const planet = "Mars"
+
+	n, found = moons3[planet]
+	fmt.Println(planet, n, "Found:", found)
+
+	delete(moons3, planet)
+
+	n, found = moons3[planet]
+	fmt.Println(planet, n, "Found:", found)
+
+	cities := map[string]int{
+		"Tokyo": 33200000, "New York": 17800000,
+		"Sau Paulo": 17700000, "Delhi": 14300000,
+		"Moscow": 10500000,
+	}
+
+	for name, pop := range cities {
+		fmt.Println("City:", name, "Population", pop)
+	}
+}
+
+func slices() {
+	primes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+
+	for i, p := range primes {
+		fmt.Println("The", i, "th prime is", p)
+	}
+}
+
+func switchF() {
+	primes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+
+	for i, p := range primes {
+		i++
+		switch i {
+		case 1:
+			fmt.Println("The", i, "st prime is", p)
+		case 2:
+			fmt.Println("The", i, "nd prime is", p)
+		case 3:
+			fmt.Println("The", i, "rd prime is", p)
+		default:
+			fmt.Println("The", i, "th prime is", p)
+		}
+	}
+}
+
+func fmtF() {
+	name := "David"
+	age := 27
+
+	fmt.Printf("Hello my name is %s, my age is %d", name, age)
 }
 
 func main() {
@@ -119,4 +174,7 @@ func main() {
 	multipleAssigments()
 	functions()
 	maps()
+	slices()
+	switchF()
+	fmtF()
 }
