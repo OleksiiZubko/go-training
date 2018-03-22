@@ -173,9 +173,27 @@ func fmtF2() {
 	name := "David"
 	age := 27
 
-	fmt.Printf("Hello my name is %d, my age is %d", name)
+	fmt.Printf("Hello my name is %d, my age is %d\n", name)
 
 	_ = age // keep the compiler happy
+}
+
+func fmtF3() {
+	name := "David"
+	age := 27
+
+	fmt.Printf("Hello my name is %v, my age is %v", name, age)
+}
+
+func scopeF1(x int) {
+	for x := 0; x < 10; x++ {
+		fmt.Println(x)
+	}
+}
+
+func scopeF() {
+	var x = 200
+	scopeF1(x)
 }
 
 func main() {
@@ -187,4 +205,6 @@ func main() {
 	switchF()
 	fmtF()
 	fmtF2()
+	fmtF3()
+	scopeF()
 }
