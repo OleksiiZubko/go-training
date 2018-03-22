@@ -169,6 +169,15 @@ func fmtF() {
 	fmt.Printf("Hello my name is %s, my age is %d", name, age)
 }
 
+func fmtF2() {
+	name := "David"
+	age := 27
+
+	fmt.Printf("Hello my name is %d, my age is %d", name)
+
+	_ = age // keep the compiler happy
+}
+
 func main() {
 	loop()
 	multipleAssigments()
@@ -177,4 +186,5 @@ func main() {
 	slices()
 	switchF()
 	fmtF()
+	fmtF2()
 }
