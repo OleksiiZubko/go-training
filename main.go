@@ -101,6 +101,17 @@ func maps() {
 
 	fmt.Println("Earth:", moons["Earth"])
 	fmt.Println("Neptune:", moons["Neptune"])
+
+	moons2 := map[string]int{"Mercury": 0, "Venus": 0, "Earth": 1, "Mars": 2, "Jupiter": 67}
+
+	n, found := moons2["Earth"]
+	fmt.Println("Earth:", n, "Found:", found)
+
+	n, found = moons2["Neptune"]
+	fmt.Println("Neptune:", n, "Found:", found)
+
+	n, found = moons2["Mercury"]
+	fmt.Println("Mercury:", n, "Found:", found)
 }
 
 func main() {
