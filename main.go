@@ -173,7 +173,7 @@ func fmtF2() {
 	name := "David"
 	age := 27
 
-	fmt.Printf("Hello my name is %d, my age is %d\n", name)
+	fmt.Printf("Hello my name is %s, my age is %d\n", name, age)
 
 	_ = age // keep the compiler happy
 }
