@@ -33,6 +33,9 @@ func CountLines(path string) (int, error) {
 	if err != nil {
 		println("Can't open file.")
 		println(err.Error())
+
+		defer r.Close()
+
 		return 0, err
 	}
 
